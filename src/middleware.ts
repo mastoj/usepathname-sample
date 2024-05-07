@@ -10,7 +10,7 @@ export function middleware(request: NextRequest) {
     random: "randomtext",
   };
   const base64Encoded = Buffer.from(JSON.stringify(someRandomJson)).toString(
-    "base64"
+    "base64url"
   );
   const newUrl = new URL(
     `/${base64Encoded}/${request.nextUrl.pathname}?${request.nextUrl.search}`,
