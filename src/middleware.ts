@@ -13,9 +13,10 @@ export function middleware(request: NextRequest) {
     "base64url"
   );
   const newUrl = new URL(
-    `/${base64Encoded}/${request.nextUrl.pathname}?${request.nextUrl.search}`,
+    `/${base64Encoded}${request.nextUrl.pathname}?${request.nextUrl.search}`,
     request.nextUrl.origin
   );
+  console.log("==> New URL: ", newUrl);
   return NextResponse.rewrite(newUrl);
 }
 
