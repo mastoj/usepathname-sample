@@ -16,7 +16,7 @@ const ClientLink = (props: Props) => {
       href={path}
       className="p-2 bg-green-300 text-black hover:bg-black hover:text-green-300 hover:underline"
     >
-      This should be a nice looking link: {path}
+      This should be a nice looking link
     </Link>
   );
 };
