@@ -12,8 +12,11 @@ const ClientLink = (props: Props) => {
       ? `${pathname}anotherpath?hello=world`
       : `${pathname}/anotherpath?hello=world`;
   return (
-    <Link href={path} className="p-2 bg-green-300 text-black">
-      Client link that should be server rendered
+    <Link
+      href={path}
+      className="p-2 bg-green-300 text-black hover:bg-black hover:text-green-300 hover:underline"
+    >
+      This should be a nice looking link: {path}
     </Link>
   );
 };
